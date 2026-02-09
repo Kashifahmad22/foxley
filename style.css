@@ -20,14 +20,14 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0;
+  padding: 0 20px;     /* 🔥 THIS fixes footer + all sections */
 }
 
 /* ======================
    NAVBAR (UNCHANGED LOGO)
 ====================== */
 .navbar {
-  border-bottom: 1px solid #094d37;
+  border-bottom: 1px solid #000000;
   background: #ffffff;
  
 }
@@ -47,14 +47,14 @@ body {
 .navbar nav a {
   margin-left: 40px;          /* more spacing */
   text-decoration: none;
-  color: #111;
+  color: #ffffff;
   font-size: 22px;            /* 🔥 bigger text */
   font-weight: 600;           /* 🔥 more weight */
   letter-spacing: 0.3px;      /* subtle premium feel */
 }
 
 .navbar nav a:hover {
-  color: #1a382e;
+  color: #0e231c;
   text-decoration: none;
 }
 
@@ -98,29 +98,22 @@ body {
 /* ======================
    HERO
 ====================== */
+
+/* HERO – FINAL FIX */
 .hero {
-  height: 85vh;
-  background-image: url("assets/images/herobanner1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 6;   /* 🔥 controls hero height on desktop */
+  overflow: hidden;
+  background: #000;
 }
 
-.hero-overlay {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.25)
-  );
+.hero-img {
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
+  object-fit: cover;     /* fills hero cleanly */
+  display: block;
 }
 
-.hero-content {
-  color: #fff;
-  text-align: center;
-}
 
 /* ======================
    BUTTON
@@ -429,4 +422,44 @@ body {
     margin-left: 0;
     font-size: 16px;
   }
+}
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;            /* 🔥 tighter spacing */
+  }
+
+  /* PRODUCT IMAGE: smaller height */
+  .product-image img {
+    height: 160px;
+  }
+
+  /* PRODUCT INFO: tighter padding */
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .product-card button {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    aspect-ratio: 16 / 10;   /* taller on mobile */
+  }
+
+
+.footer-bottom {
+ 
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #e0dfdf;
 }
