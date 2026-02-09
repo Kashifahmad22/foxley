@@ -429,7 +429,7 @@ body {
     margin-left: 0;
     font-size: 16px;
   }
-}
+
 .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;            /* 🔥 tighter spacing */
@@ -457,9 +457,10 @@ body {
     padding: 10px;
     font-size: 13px;
   }
-}
+
 
   .hero {
     height: 35vh;          /* 🔥 much better for mobile */
   }
+
 }
