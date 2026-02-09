@@ -1,0 +1,432 @@
+/* ======================
+   RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff46;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* ======================
+   CONTAINER
+====================== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0;
+}
+
+/* ======================
+   NAVBAR (UNCHANGED LOGO)
+====================== */
+.navbar {
+  border-bottom: 1px solid #094d37;
+  background: #ffffff;
+ 
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.navbar nav a {
+  margin-left: 40px;          /* more spacing */
+  text-decoration: none;
+  color: #111;
+  font-size: 22px;            /* 🔥 bigger text */
+  font-weight: 600;           /* 🔥 more weight */
+  letter-spacing: 0.3px;      /* subtle premium feel */
+}
+
+.navbar nav a:hover {
+  color: #1a382e;
+  text-decoration: none;
+}
+
+
+/* LOGO FIX WITHOUT RESIZING IMAGE */
+.logo-wrap {
+  height: 70px;              /* visible navbar logo height */
+  overflow: hidden;          /* hide extra part */
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrap img {
+  height: 150px;             /* unchanged image size */
+  width: auto;
+}
+
+
+
+/* LOGO — KEPT AS YOU HAD */
+.logo img {
+  height: 150px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+.navbar nav a {
+  margin-left: 34px;
+  text-decoration: none;
+  color: #204b51;
+  font-size: 20px;
+}
+
+.navbar nav a:hover {
+  text-decoration: none;
+  color: rgb(56, 103, 104);
+}
+
+/* ======================
+   HERO
+====================== */
+.hero {
+  height: 85vh;
+  background-image: url("assets/images/herobanner1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.25)
+  );
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+}
+
+/* ======================
+   BUTTON
+====================== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ======================
+   PRODUCTS
+====================== */
+.products {
+  padding: 50px 0;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 35px;
+}
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+/* CARD */
+.product-card {
+  background: #fff;
+  border: 0.5px solid #f4e1e1;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+/* IMAGE */
+.product-image {
+  background: #fafafa;
+  padding: 16px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain;
+}
+
+/* INFO */
+.product-info {
+  padding: 18px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+/* ⭐ STAR RATING (BIGGER) */
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 12px;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 18px; /* increased */
+}
+
+.rating-count {
+  font-size: 13px;
+  color: #777;
+}
+
+/* PRICE */
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* CTA */
+.product-card button {
+  width: 100%;
+  background: #060544ac;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-card button:hover {
+  opacity: 0.9;
+}
+
+/* ======================
+   WHY FOXLEY
+====================== */
+.why {
+  background: #f8f8f8;
+  padding: 80px 0;
+}
+
+.why h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.why-icon {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.why-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ======================
+   CONTACT
+====================== */
+.contact {
+  text-align: center;
+  padding: 70px 0;
+}
+
+.contact p {
+  margin: 10px 0 20px;
+  color: #555;
+}
+
+/* ======================
+   REVIEWS (REFINED)
+====================== */
+.reviews {
+  background: #ffffff;
+  padding: 80px 0;
+}
+
+.reviews h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  border: 1px solid #eee;
+  padding: 32px 26px;
+  text-align: center;
+  background: #fafafa;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.review-card:hover {
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+.review-card .stars {
+  font-size: 20px; /* bigger for reviews */
+  margin-bottom: 16px;
+}
+
+.review-card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+
+.review-card h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.review-card span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ======================
+   FOOTER
+====================== */
+.site-footer {
+  background: #1a382e;
+  color: #ddd;
+  padding: 60px 0 20px;
+  font-size: 14px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  color: #bbb;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+/* PAYMENT BADGE */
+.payment-badge img {
+  margin-top: 10px;
+  height: 100px; /* kept large as you had */
+  background: #b4cfc6;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #e0dfdf;
+}
+
+/* ======================
+   MOBILE
+====================== */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar nav {
+    gap: 20px;
+  }
+
+  .navbar nav a {
+    margin-left: 0;
+    font-size: 16px;
+  }
+}
