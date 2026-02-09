@@ -422,6 +422,40 @@ body {
     margin-left: 0;
     font-size: 16px;
   }
+
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;            /* 🔥 tighter spacing */
+  }
+
+  /* PRODUCT IMAGE: smaller height */
+  .product-image img {
+    height: 160px;
+  }
+
+  /* PRODUCT INFO: tighter padding */
+  .product-info {
+    padding: 12px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .product-card button {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+
+  .hero {
+    height: 35vh;          /* 🔥 much better for mobile */
+  }
+
 }
 .product-grid {
     grid-template-columns: repeat(2, 1fr);
