@@ -460,6 +460,6 @@ body {
 }
 
   .hero {
-    height: 45vh;          /* 🔥 much better for mobile */
+    height: 35vh;          /* 🔥 much better for mobile */
   }
 }
